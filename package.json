@@ -1,0 +1,19 @@
+{
+  "name": "crud-bhps-testing-be",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "http-status-code": "^2.1.0",
+    "mongoose": "^8.13.1"
+  }
+}
