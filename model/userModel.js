@@ -1,6 +1,6 @@
 const { Collection } = require("mongoose")
 
-const mongoose = required("mongoose")
+const mongoose = require("mongoose")
 
 
 const userSchema = new mongoose.Schema({
@@ -32,7 +32,7 @@ const userSchema = new mongoose.Schema({
     }
 }, {
     Collection: "users",
-    timestaps: true
+    timestamps: true
 })
 
 module.exports = mongoose.model("user", userSchema)

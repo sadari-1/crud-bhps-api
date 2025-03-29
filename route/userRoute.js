@@ -7,7 +7,7 @@ userRoute.get(`/all`, userController.readAll)
 // read single user 
 userRoute.get(`/single/:id`, userController.readSingle)
 // create user
-userRoute.post(`/create/:id`, userController.createUser)
+userRoute.post(`/create`, userController.createUser)
 // update user
 userRoute.patch(`/update/:id`, userController.updateUser)
 // delete user

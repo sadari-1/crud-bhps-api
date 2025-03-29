@@ -1,9 +1,8 @@
 const express = require("express")
-
 // config settings to access env variables
 require('dotenv').config()
 // const {StatusCodes} = require("http-status-code")
-const { StatusCodes } = require("http-status-code")
+const { StatusCodes } = require("http-status-codes")
 
 // import db config methos
 const connectDb = require("./db/dbConfig")
@@ -24,7 +23,7 @@ app.get(`/`, (req, res) => {
 })
 
 // api route 
-app.use(`api/user`, require("./route/userRoute"))
+app.use(`/api/user`, require("./route/userRoute"))
 
 
 // pnf path
