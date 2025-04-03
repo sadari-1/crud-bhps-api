@@ -13,14 +13,19 @@ const app = express()
 app.use(express.urlencoded({ extended: true}))
 app.use(express.json())
 
+app.use(express.static('views'))
+// app.use(express.static(path.join(__dirname, "../views")));
+
 
 //default path
-app.get(`/`, (req, res) => {
-    return res.status(StatusCodes.OK).json({
-        status : true,
-        msg : "user api"
-    })
-})
+// app.get(`/`, (req, res) => {
+//     return res.status(StatusCodes.OK).json({
+//         status : true,
+//         msg : "user api"
+//     })
+// }).
+
+app.use(`/`, require("./route/templateRoute"))
 
 // api route 
 app.use(`/api/user`, require("./route/userRoute"))
